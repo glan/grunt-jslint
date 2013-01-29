@@ -88,7 +88,7 @@ module.exports = function (grunt) {
 
 			grunt.log.write(template);
 
-			if (report.failures) {
+			if (report.failures && options.failOnError) {
 				next(false);
 			} else {
 				next(true);
